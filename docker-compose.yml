@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+  download:
+    build: .
+    container_name: "nginx-down"
+    ports:
+      - "8089:80"
+    volumes:
+      - "/c/ws/docker/cdn:/usr/share/nginx/download/data"
+      - "/c/ws/nginx-down/log:/var/log/nginx/"
